@@ -13,12 +13,12 @@ PROGRAMS = \
 all: $(PROGRAMS)	
 
 clean:
-	rm -f $(PROGRAMS) *.o
+	rm -f $(PROGRAMS) src/*.o
 
-%.o: %.c
-	$(CC) -c $<
+src/%.o: %.c
+	$(CC) -c $< -o $@
 
-reader: reader.o
+reader: src/reader.o
 	$(CC) -o $@ $^ -lpulse -lpulse-simple
 
 
