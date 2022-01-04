@@ -1,0 +1,1 @@
+parec -d spotify.monitor | oggenc -b 192 --raw - | ffmpeg -f ogg -i pipe:0 -vn -c:a aac -b:a 128k -ac 2 -f hls -hls_time 4 -hls_list_size 3 stream.m3u8
