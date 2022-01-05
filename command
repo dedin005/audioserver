@@ -13,8 +13,8 @@ ffmpeg \
 -b:a 128k \
 -ac 2 \
 -f hls \
--hls_time 4 \
--hls_list_size 3 \
--hls_delete_threshold 3 \
+-hls_time 1.2 \
+-hls_list_size 1 \
+-hls_delete_threshold 1 \
 -hls_flags delete_segments \
  stream.m3u8
