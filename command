@@ -1,5 +1,9 @@
+sudo apt install mopidy-spotify mopidy-mpd
+cp mopidy.conf ~/.config/mopidy/
+
 pacmd load-module module-null-sink sink_name=spotify
-pacmd update-sink-proplist spotify device.description=spotify
+
+(mopidy&)
 
 parec -d spotify.monitor | \
 \
@@ -18,3 +22,6 @@ ffmpeg \
 -hls_delete_threshold 1 \
 -hls_flags delete_segments \
  stream.m3u8
+
+
+
