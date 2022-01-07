@@ -1,5 +1,5 @@
 FROM debian:stable-20211220
-WORKDIR app/
-run get-mopidy.sh && install.sh
+WORKDIR /app
 COPY . .
+RUN systemctl start apache2
 CMD ["./command"]
