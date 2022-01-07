@@ -4,7 +4,7 @@
 
   1. Spotify (or another audio stream)  
   2. PulseAudio
-  3. oggenc
+  3. oggenc (vorbis-tools)
   4. FFmpeg
   5. Apache (or another webserver)
 

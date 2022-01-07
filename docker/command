@@ -1,0 +1,27 @@
+sudo apt install mopidy-spotify mopidy-mpd
+cp mopidy.conf ~/.config/mopidy/
+
+# create a null sink
+pacmd load-module module-null-sink sink_name=audio
+
+# the above is the only sink, so the audio will connect to it
+mopidy&
+
+parec -d audio.monitor | \
+\
+oggenc -b 192 --raw - | \
+\
+ffmpeg \
+-f ogg \
+-i pipe:0 \
+-vn \
+-c:a aac \
+-b:a 128k \
+-ac 2 \
+-f hls \
+-hls_time 1.2 \
+-hls_list_size 1 \
+-hls_delete_threshold 1 \
+-hls_flags delete_segments \
+ stream.m3u8
+
