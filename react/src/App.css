@@ -1,0 +1,21 @@
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.Nav-header {
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: #20dd8e;
+}
+
+.App-body {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
