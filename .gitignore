@@ -1,3 +1,6 @@
 *.o
 reader
 archive/*
+node_modules/
+build/
+out/
