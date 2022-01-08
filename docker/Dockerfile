@@ -1,5 +1,5 @@
 FROM debian:stable-20211220
 WORKDIR /app
-COPY . .
+COPY . /app
 RUN /install.sh
 CMD ["./command"]
