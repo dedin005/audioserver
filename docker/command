@@ -20,4 +20,3 @@ ffmpeg \
 -hls_delete_threshold 1 \
 -hls_flags delete_segments \
  /var/www/html/src/stream.m3u8
-
