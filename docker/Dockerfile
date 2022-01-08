@@ -1,5 +1,5 @@
 FROM debian:stable-20211220
 WORKDIR /app
 COPY . .
-RUN systemctl start apache2
+RUN install.sh
 CMD ["./command"]
